@@ -1,0 +1,17 @@
+#no hace niguno de los cambios solo muestra lo que en teoria deberia hacer
+ng g c pages/about --dry-run
+
+#crea el componete nombreComponente en src/nombreDirectorio
+ng g c nombreDirectorio/nombreComponente
+
+#crea el modulo nombreModulo
+ng g m nombreModulo
+
+#crea el modulo nombreModulo sin crear un folder con el mismo nombre
+ng g m nombreModulo --flat
+
+#crea el modulo nombreModulo en el directorio nombreModulo y un archivo de rutas
+ng g m nombreModulo/nombreModulo --routing
+
+#crea servicio  nombreServicio en el directorio nombreDirectorio sin los archivos para pruebas
+ng g s nombreDirectorio/nombreServicio --spec=false
