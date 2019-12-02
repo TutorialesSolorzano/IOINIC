@@ -1,0 +1,12 @@
+#muestra todo lo que podemos generar
+ionic g
+#mustras la ejecucion del comando
+ionic g page pages/inicio --dry-run
+#genera la pagina paginaNombre en el directorio paginaDirecorio
+ionic g page paginaDirecorio/paginaNombre
+#genera la pagina paginaNombre en el directorio paginaDirecorio sin los archivos de pruebas
+ionic g page paginaDirecorio\paginaNombre --spec=false
+#genera el modulo moduloNombre en el direcotrio moduloDirectorio
+ionic g module moduloDirectorio/moduloNombre 
+#genera el componente componenteNombre en el directorio componenteDirectorio sin los archivos de pruebas
+ionic g component componenteDirectorio\componenteNombre --spec=false
