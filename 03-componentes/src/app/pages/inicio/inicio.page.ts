@@ -1,5 +1,9 @@
 import { Component, OnInit } from "@angular/core";
 import { SplashScreen } from "@ionic-native/splash-screen/ngx";
+import { MenuController } from "@ionic/angular";
+import { Componente } from '../../interfaces/interfaces';
+import { DataService } from '../../services/data.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: "app-inicio",
@@ -7,83 +11,19 @@ import { SplashScreen } from "@ionic-native/splash-screen/ngx";
   styleUrls: ["./inicio.page.scss"]
 })
 export class InicioPage implements OnInit {
-  componentes: Componente[] = [
-    {
-      icon: "american-football",
-      name: "Action Sheet",
-      redirectTo: "/action-sheet"
-    },
-    {
-      icon: "appstore",
-      name: "Alert",
-      redirectTo: "/alert"
-    },
-    {
-      icon: "beaker",
-      name: "Avatar",
-      redirectTo: "/avatar"
-    },
-    {
-      icon: "radio-button-on",
-      name: "Botones y Router",
-      redirectTo: "/botones"
-    },
-    {
-      icon: "card",
-      name: "Cards",
-      redirectTo: "/card"
-    },
-    {
-      icon: "checkmark-circle-outline",
-      name: "Checkbox",
-      redirectTo: "/check"
-    },
-    {
-      icon: "calendar",
-      name: "DateTime",
-      redirectTo: "/date-time"
-    },
-    {
-      icon: "car",
-      name: "Fab",
-      redirectTo: "/fab"
-    },
-    {
-      icon: "grid",
-      name: "Grid & Rows",
-      redirectTo: "/grid"
-    },
-    {
-      icon: "infinite",
-      name: "Infinite Scroll",
-      redirectTo: "/infinite-scroll"
-    },
-    {
-      icon: "hammer",
-      name: "Inputs & Forms",
-      redirectTo: "/input"
-    },
-    {
-      icon: "list",
-      name: "Lists & Sliding",
-      redirectTo: "/list"
-    }
-  ];
+  componentes: Observable<Componente[]>;
 
-  constructor(private splash: SplashScreen) {
-    splash.show();
-    window.setTimeout(function() {
-      splash.hide();
-    }, 3000);
-  }
+  constructor(private splash: SplashScreen, private menu: MenuController, private dataService: DataService) {}
 
   ngOnInit() {
-  
+    this.componentes= this.dataService.getMenuOptions();
+     /* this.splash.show();
+    window.setTimeout(function() {
+      this.splash.hide();
+    }, 3000); */
   }
-}
 
-interface Componente {
-  icon: string;
-  name: string;
-  redirectTo: string;
+  /* toggleMenu() {
+    this.menu.toggle();
+  } */
 }
