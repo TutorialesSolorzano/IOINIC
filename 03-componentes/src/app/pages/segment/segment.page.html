@@ -31,4 +31,20 @@
     <ion-label text-right>{{ heroe.publisher }}</ion-label>
   </ion-item>
 </ion-list>  
+
+<ion-list *ngIf="(superHeroes | async) === null">
+  <ion-item class="animated fadeIn fast" *ngFor="let heroe of [1,1,1,1,1,1,1,1,1,1,1,1,1]">
+    <ion-avatar slot="start">
+      <ion-skeleton-text animated></ion-skeleton-text>
+    </ion-avatar>
+    <ion-label>
+      <h3><ion-skeleton-text animated  width="70%"></ion-skeleton-text></h3>
+      <p>
+        <ion-skeleton-text animated width="50%"></ion-skeleton-text>
+      </p>
+    </ion-label>
+    <ion-label text-right><ion-skeleton-text animated width="40%"></ion-skeleton-text></ion-label>
+  </ion-item>
+</ion-list>
+
 </ion-content>
