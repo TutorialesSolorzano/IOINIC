@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 import { PopoverController } from "@ionic/angular";
 import { PopInfoComponent } from "../../components/pop-info/pop-info.component";
 
@@ -14,10 +14,19 @@ export class PopoverPage implements OnInit {
 
   async mostratPop(ev: any) {
     const popover = await this.popoverController.create({
-      component: PopInfoComponent
+      component: PopInfoComponent,
+      event: ev,
+      mode: "ios",
+      backdropDismiss: false
+
       /*         event: ev,
         translucent: true */
     });
-    return await popover.present();
+    await popover.present();
+
+    //const { data } = await popover.onDidDismiss();
+    const { data } = await popover.onWillDismiss();
+    const { item }=data;
+    console.log("padre",item );
   }
 }

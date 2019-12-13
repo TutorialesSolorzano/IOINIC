@@ -78,5 +78,26 @@
       "icon": "tablet-portrait",
       "name": "Popover",
       "redirectTo": "/popover"
+    },
+    {
+      "icon": "code-working",
+      "name": "ProgressBar & Range",
+      "redirectTo": "/progress-bar"
+    },
+    {
+      "icon": "arrow-round-down",
+      "name": "Refresher",
+      "redirectTo": "/refresher"
+    },
+    {
+      "icon": "search",
+      "name": "Searchbar",
+      "redirectTo": "/searchbar"
+    },
+    {
+      "icon": "copy",
+      "name": "Segment",
+      "redirectTo": "/segment"
     }
+    
   ]
