@@ -1,0 +1,14 @@
+ionic cordova platform add android
+ionic cordova prepare android
+ionic cordova build android
+
+ionic cordova platform remove android
+
+ionic cordova run --list
+ionic cordova run android --target=nombreDevice
+ionic cordova run android --target=nombreDevice -l
+
+ionic cordova run android -l
+
+npm i -g native-run
+ionic cordova run --list --no-native-run
