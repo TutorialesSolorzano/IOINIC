@@ -17,10 +17,6 @@ export class InicioPage implements OnInit {
 
   ngOnInit() {
     this.componentes= this.dataService.getMenuOptions();
-      this.splash.show();
-    window.setTimeout(function() {
-      this.splash.hide();
-    }, 3000); 
   }
 
   /* toggleMenu() {

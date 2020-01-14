@@ -12,10 +12,11 @@ import { ComponentsModule } from "./components/components.module";
 
 import { HttpClientModule } from "@angular/common/http";
 import { PipesModule } from './pipes/pipes.module';
+import { SplashPage } from './pages/splash/splash.page';
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
+  declarations: [AppComponent,SplashPage],
+  entryComponents: [SplashPage],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
