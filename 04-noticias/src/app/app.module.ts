@@ -12,8 +12,14 @@ import { AppComponent } from "./app.component";
 import { HttpClientModule } from "@angular/common/http";
 
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
+
+import { IonicStorageModule } from '@ionic/storage';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,12 +29,17 @@ import { environment } from '../environments/environment';
     IonicModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
+<<<<<<< HEAD
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+=======
+    IonicStorageModule.forRoot()
+>>>>>>> 2f6ee509ea944eedd886ce06bbedbe7cccd696a5
   ],
   providers: [
     StatusBar,
     SplashScreen,
     InAppBrowser,
+    SocialSharing,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
