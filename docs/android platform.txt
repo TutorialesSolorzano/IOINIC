@@ -6,9 +6,14 @@ ionic cordova platform remove android
 
 ionic cordova run --list
 ionic cordova run android --target=nombreDevice
-ionic cordova run android --target=nombreDevice -l
+ionic cordova run android --target=2948623d0305 -l
 
 ionic cordova run android -l
 
 npm i -g native-run
 ionic cordova run --list --no-native-run
+
+cordova telemetry on
+
+
+C:\Users\pieda\Desktop\IONIC\IOINIC\07-pushapp\platforms\android\app\build\outputs\apk\debug\app-debug.apk
